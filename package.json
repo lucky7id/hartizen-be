@@ -1,0 +1,46 @@
+{
+  "name": "hartizen-be",
+  "version": "1.0.0",
+  "description": "Hartizen Backend",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/index.js",
+    "ts-watch": "tsc -w",
+    "serve-debug": "nodemon --inspect dist/index.js",
+    "dev": "concurrently \"npm:ts-watch\" \"npm:serve-debug\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucky7id/hartizen-be.git"
+  },
+  "author": "Brandon Thomas <brandon@hartizen.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucky7id/hartizen-be/issues"
+  },
+  "homepage": "https://github.com/lucky7id/hartizen-be#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "knex": "^0.16.5",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-twitter": "^1.0.4",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.1",
+    "@types/express-session": "^1.15.12",
+    "@types/morgan": "^1.7.35",
+    "@types/passport": "^1.0.0",
+    "@types/winston": "^2.4.4",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11",
+    "typescript": "^3.4.5"
+  }
+}

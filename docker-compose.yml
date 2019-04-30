@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    env_file: .env
+    build: .
+    ports: 
+      - 8080:8080
+    volumes:
+      - .:/server
+  postgres:
+    env_file: .env
+    image: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
