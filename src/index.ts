@@ -1,4 +1,4 @@
-import {config} from 'dotenv';
+import { config } from 'dotenv';
 import knex from 'knex';
 
 config();
@@ -7,12 +7,12 @@ const db = knex({
   connection: {
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
-    host: 'postgres'
-  }
+    host: 'postgres',
+  },
 });
 
 const f = async () => {
-  await db.select()
-}
+  await db.select();
+};
 
 f().then(() => console.log('success')).catch(console.error);
