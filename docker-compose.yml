@@ -3,12 +3,16 @@ services:
   web:
     env_file: .env
     build: .
-    ports: 
-      - 8080:8080
+    ports:
+      - 6900:6900
+      - 9229:9229
     volumes:
       - .:/server
+    command: npm run dev
   postgres:
     env_file: .env
     image: postgres
+    ports:
+      - 5432:5432
     volumes:
       - ./data:/var/lib/postgresql/data

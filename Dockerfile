@@ -6,6 +6,6 @@ COPY . /server
 
 RUN npm install
 
-EXPOSE 8080
+EXPOSE 6900
 
 CMD ["npm", "run", "start"]
